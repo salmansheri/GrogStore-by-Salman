@@ -6,8 +6,15 @@ import { BsSearch } from 'react-icons/bs';
 import { AiOutlineShoppingCart } from 'react-icons/ai'; 
 import { HiOutlineUser } from 'react-icons/hi'; 
 import Link from 'next/link';
+import { UserButton } from '@clerk/nextjs'; 
 
-const Navbar = () => {
+interface NavbarProps {
+    user: any; 
+}
+
+const Navbar: React.FC<NavbarProps> = ({
+    user
+}) => {
     const currentUser = false; 
   return (
     <nav className="h-[72px] border items-center flex px-52 bg-white">
@@ -55,12 +62,13 @@ const Navbar = () => {
             <span>Cart</span>
             </div>
 
-            {currentUser ? (
+            { user ? (
 
             <div className='flex flex-col items-center cursor-pointer hover:text-green-500'>
                 
-            <HiOutlineUser size={20} />
-            <span>Profile</span>
+           
+            <UserButton afterSignOutUrl='/' />
+           
             </div>
             ): (
                 <div className='flex flex-col items-center cursor-pointer'>
