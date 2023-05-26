@@ -21,6 +21,7 @@ module.exports = {
       colors: {
         'myGreen': '#00B37A',
         'myBlack': '#171e30',
+        'lightGreen': '#00D290'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -29,5 +30,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms")
+  ],
 }
