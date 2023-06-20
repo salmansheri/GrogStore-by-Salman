@@ -22,7 +22,7 @@ const Features = () => {
         },
     ]
   return (
-    <section className="px-[200px] h-[500px]">
+    <section className="px-5 lg:px-[200px] h-[500px]">
         <div className="flex flex-row space-x-3 items-center text-xs my-10">
             <p className="text-myGreen">Home</p>
             <IoIosArrowRoundForward className="text-myBlack text-opacity-50" />

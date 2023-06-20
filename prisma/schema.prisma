@@ -30,7 +30,7 @@ model Product {
   merchantId  String   @db.ObjectId
   ownerName   String?
   productName String?
-  image String?
+  image       String?
   category    String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
@@ -40,11 +40,11 @@ model Product {
 }
 
 model Cart {
-  id              String @id @default(auto()) @map("_id") @db.ObjectId
-  userId          String 
-  quantity        Int    @default(1)
+  id              String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId          String
+  quantity        Int     @default(1)
   productName     String
-  image String?
+  image           String?
   price           Int
   productCategory String
 
@@ -53,11 +53,12 @@ model Cart {
 }
 
 model Order {
-  id          String @id @default(auto()) @map("_id") @db.ObjectId
-  userId      String 
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String
   productName String
   quantity    Int
-  Image String?
+  price       Int
+  Image       String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

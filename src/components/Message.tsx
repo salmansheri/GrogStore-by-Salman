@@ -4,7 +4,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 
 const Message = () => {
   return (
-    <div className="h-[44px]  bg-gradient-to-r from-blue-950 to-blue-800 flex items-center  px-52">
+    <div className="h-auto  bg-gradient-to-r from-blue-950 to-blue-800 flex items-center px-5   lg:px-52">
         <div className='container text-white flex flex-row items-center  justify-between'>
             <div className="flex flex-row space-x-5 items-center">
 

@@ -74,8 +74,8 @@ const Form: React.FC<FormProps> = ({ merchantId, ownerName }) => {
       });
   };
   return (
-    <div className="flex justify-center items-center">
-      <div className="bg-gray-500/5 p-5 w-[60%] rounded-lg flex flex-col space-y-5 shadow-lg">
+    <div className="flex w-full lg:justify-center lg:items-center">
+      <div className="bg-gray-500/5 p-5 w-full lg:w-[60%] rounded-lg flex flex-col space-y-5 shadow-lg">
         <div>
           <label className="text-lg font-semibold">Product Name: </label>
           <input

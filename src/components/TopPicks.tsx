@@ -21,7 +21,7 @@ const TopPicks = () => {
     },
   ]
   return (
-    <div className="h-[200px] px-[200px] my-10">
+    <div className="h-[200px] px-5 lg:px-[200px] my-10">
         <div>
           <h1>Top Picks for you</h1>
         </div>

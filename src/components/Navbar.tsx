@@ -6,6 +6,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { useRouter } from 'next/navigation'; 
 
 import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
@@ -16,9 +17,10 @@ interface NavbarProps {
 }
 
 const Navbar: React.FC<NavbarProps> = ({ user }) => {
+  const router = useRouter(); 
   
   return (
-    <nav className="h-[72px] border items-center flex px-52 bg-white">
+    <nav className="h-[72px] border items-center flex px-10 lg:px-52 bg-white">
       <div className="container flex items-center justify-between">
         {/* Left         */}
         <div className="flex flex-row flex-2 space-x-10">
@@ -32,8 +34,26 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
           </Link>
           <div className="flex flex-row items-center space-x-1">
             <IoLocationSharp color="green" />
-            <span>set Location</span>
-            <MdKeyboardArrowDown color="green" size={20} />
+            <select className="z-50">
+             
+                <option >
+           
+                
+                </option>
+            
+             
+                <option>
+
+                Krishagiri
+                </option>
+             
+           
+                <option>
+
+                Krishagiri
+                </option>
+               
+            </select>
           </div>
         </div>
         {/* center  */}
@@ -46,11 +66,8 @@ const Navbar: React.FC<NavbarProps> = ({ user }) => {
         </div>
         {/* right  */}
         <div className="flex-1  flex flex-row text-sm space-x-5">
-          <div className="flex flex-col items-center cursor-pointer hover:text-green-500">
-            <BsSearch size={20} />
-            <span>Search</span>
-          </div>
-          <div className="flex flex-col items-center cursor-pointer hover:text-green-500">
+         
+          <div className="flex flex-col items-center cursor-pointer hover:text-green-500" onClick={() => router.push("/cart")}>
             <AiOutlineShoppingCart className="hover:text-green-500" size={20} />
             <span>Cart</span>
           </div>

@@ -14,7 +14,7 @@ export default async function MerchantPage() {
 
    
     return(
-        <div className="px-[200px] h-screen">
+        <div className="px-5 lg:px-[200px] h-screen">
             <div className="mt-5">
                 <h1 className="text-3xl font-bold">Become A Merchant In GrogStore</h1>
             </div>
