@@ -6,7 +6,7 @@ Buy Groceries at low Cost
 ### Clone the repository 
 
 ```command
-git clone 
+git clone https://github.com/salmansheri/GrogStore-by-Salman.git
 
 ```
 
